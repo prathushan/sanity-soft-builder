@@ -17,7 +17,14 @@ export default {
         { type: 'columnBlock' },
         { type: 'containerBlock' },
         { type: 'headingBlock' },
-        { type: 'spacerBlock' }
+        { type: 'spacerBlock' },
+        { type: 'fontUpload' }, 
+        { type: 'footerSetting' },
+        { type: 'menu' },
+        { type: 'menuitem' },
+        { type: 'post' },
+        { type: 'siteSettings' },
+        { type: 'mediaAsset' }, 
       ]
     }
   ]

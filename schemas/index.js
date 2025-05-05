@@ -14,6 +14,16 @@ import containerBlock from './blocks/containerBlock'  // ✅ Add this
 import headingBlock from './blocks/headingBlock'      // ✅ And this
 import spacerBlock from './blocks/spacerBlock'
 
+
+import fontUpload from './blocks/fontUpload'
+import footerSetting from './blocks/footerSettings'
+import menu from './blocks/menu'
+import menuitem from './blocks/menuitem'
+import post from './blocks/post'
+import siteSettings from './blocks/siteSettings'
+import { FaCog } from 'react-icons/fa'
+import mediaAsset from './blocks/mediaAsset'
+
 export const schemaTypes = [
   page,
   builderBlock,
@@ -25,5 +35,12 @@ export const schemaTypes = [
   columnsBlock,
   containerBlock,  // ✅ Included
   headingBlock,    // ✅ Included
-  spacerBlock
+  spacerBlock,
+  fontUpload, 
+  footerSetting,
+  menu,
+  menuitem,
+  post,
+  siteSettings,
+  mediaAsset,
 ]
