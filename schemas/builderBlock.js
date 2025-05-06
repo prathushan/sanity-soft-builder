@@ -14,6 +14,7 @@ export default {
         { type: 'imageBlock' },
         { type: 'videoBlock' },
         { type: 'buttonBlock' },
+        { type:  'contactForm'},
         { type: 'columnBlock' },
         { type: 'containerBlock' },
         { type: 'headingBlock' },
