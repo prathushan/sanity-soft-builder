@@ -44,6 +44,21 @@ export default {
         type: 'datetime',
         title: 'Published At',
       },
+      {
+        name: 'seo',
+        title: 'SEO Settings',
+        type: 'object',
+        fields: [
+          {name: 'metaTitle', type: 'string'},
+          {name: 'metaDescription', type: 'text'},
+          {name: 'ogImage', type: 'image'},
+          {
+            name: 'canonicalUrl',
+            type: 'url',
+            description: 'Canonical URL for this page'
+          }
+        ]
+      }
     ],
   };
   
