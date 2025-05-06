@@ -1,8 +1,10 @@
 // schemas/page.js
+import { FaFileAlt } from 'react-icons/fa';
 export default {
   name: 'page',
   type: 'document',
   title: 'Page',
+  icon: FaFileAlt,
   fields: [
     { name: 'title', type: 'string' },
     { 

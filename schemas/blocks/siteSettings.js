@@ -6,97 +6,227 @@ export default {
   type: 'document',
   icon: FaCog,
   fields: [
-    { name: 'siteName', type: 'string', title: 'Site Name' },
+    // Basic Site Info
+    {
+      name: 'siteName',
+      type: 'string',
+      title: 'Site Name',
+      description: 'Enter the name of your site.',
+    },
     {
       name: 'favicon',
       type: 'image',
       title: 'Favicon',
       options: {
-        hotspot: true  
-      }
+        hotspot: true,
+      },
+      description: 'Upload your site favicon (16x16px recommended).',
     },
-    {
-      name: 'logo',
-      type: 'image',
-      title: 'Logo',
-      options: {
-        hotspot: true  
-      }
-    },
+    // Font Settings (Google Fonts & Custom Fonts)
     {
       name: 'fonts',
-      title: 'Fonts',
+      title: 'Font Settings',
       type: 'object',
       fields: [
-        {
-          name: 'uploadedFonts',
-          title: 'Custom Uploaded Fonts',
-          type: 'array',
-          of: [{ type: 'fontUpload' }]
-        },
         {
           name: 'googleFonts',
           title: 'Google Fonts',
           type: 'array',
           of: [{ type: 'string' }],
-          description: 'Enter font family names from Google Fonts (e.g., Roboto)'
+          description: 'Enter font family names from Google Fonts (e.g., Roboto, Open Sans).',
         },
         {
-          name: 'fontSelections',
-          title: 'Font Selections (H1–H5, Body)',
-          type: 'object',
-          fields: [
-            { name: 'h1', title: 'H1 Font', type: 'string' },
-            { name: 'h2', title: 'H2 Font', type: 'string' },
-            { name: 'h3', title: 'H3 Font', type: 'string' },
-            { name: 'h4', title: 'H4 Font', type: 'string' },
-            { name: 'h5', title: 'H5 Font', type: 'string' },
-            { name: 'body', title: 'Body Font', type: 'string' }
-          ]
-        }
-      ]
+          name: 'uploadedFonts',
+          title: 'Custom Fonts',
+          type: 'array',
+          of: [{ type: 'fontUpload' }],
+          description: 'Upload custom font files here.',
+        },
+      ],
     },
+
+    // Typography Settings (H1-H5 and Body)
     {
       name: 'typography',
+      title: 'Typography Settings',
       type: 'object',
-      title: 'Responsive Typography',
-      fields: ['h1', 'h2', 'h3', 'h4', 'h5'].map(h => ({
-        name: h,
-        type: 'object',
-        title: h.toUpperCase(),
-        fields: ['mobile', 'tablet', 'desktop'].map(device => ({
-          name: device,
-          title: `${device.charAt(0).toUpperCase() + device.slice(1)} Size`,
+      fields: [
+        // H1
+        {
+          name: 'h1',
+          title: 'H1 Font',
           type: 'object',
           fields: [
-            {
-              name: 'value',
-              type: 'number',
-              title: 'Font Size'
+            { name: 'font', type: 'string', title: 'Font', options: { list: [] } },  
+            { 
+              name: 'fontSize', 
+              type: 'number', 
+              title: 'Font Size',
+              description: 'Font size (value only)',
             },
             {
-              name: 'unit',
+              name: 'fontSizeUnit',
               type: 'string',
-              title: 'Unit',
+              title: 'Font Size Unit',
               options: {
-                list: ['px', 'rem', '%', 'em', 'vw', 'vh'],
-                layout: 'dropdown'
-              }
-            }
+                list: ['px', 'em', '%', 'rem', 'vw', 'vh'],
+                layout: 'dropdown',
+              },
+              description: 'Select unit for font size',
+            },
+            { name: 'fontWeight', type: 'string', title: 'Font Weight', options: { list: ['normal', 'bold', 'lighter', 'bolder'] } },
+            { name: 'lineHeight', type: 'number', title: 'Line Height', description: 'Line height in px, rem, etc.' },
           ]
-        }))
-      }))
+        },
+
+        // H2
+        {
+          name: 'h2',
+          title: 'H2 Font',
+          type: 'object',
+          fields: [
+            { name: 'font', type: 'string', title: 'Font', options: { list: [] } },  // Dropdown from fonts
+            { 
+              name: 'fontSize', 
+              type: 'number', 
+              title: 'Font Size' 
+            },
+            {
+              name: 'fontSizeUnit',
+              type: 'string',
+              title: 'Font Size Unit',
+              options: {
+                list: ['px', 'em', '%', 'rem', 'vw', 'vh'],
+                layout: 'dropdown',
+              },
+              description: 'Select unit for font size',
+            },
+            { name: 'fontWeight', type: 'string', title: 'Font Weight', options: { list: ['normal', 'bold', 'lighter', 'bolder'] } },
+            { name: 'lineHeight', type: 'number', title: 'Line Height' },
+          ]
+        },
+
+        // H3
+        {
+          name: 'h3',
+          title: 'H3 Font',
+          type: 'object',
+          fields: [
+            { name: 'font', type: 'string', title: 'Font', options: { list: [] } },  // Dropdown from fonts
+            { 
+              name: 'fontSize', 
+              type: 'number', 
+              title: 'Font Size' 
+            },
+            {
+              name: 'fontSizeUnit',
+              type: 'string',
+              title: 'Font Size Unit',
+              options: {
+                list: ['px', 'em', '%', 'rem', 'vw', 'vh'],
+                layout: 'dropdown',
+              },
+              description: 'Select unit for font size',
+            },
+            { name: 'fontWeight', type: 'string', title: 'Font Weight', options: { list: ['normal', 'bold', 'lighter', 'bolder'] } },
+            { name: 'lineHeight', type: 'number', title: 'Line Height' },
+          ]
+        },
+
+        // H4
+        {
+          name: 'h4',
+          title: 'H4 Font',
+          type: 'object',
+          fields: [
+            { name: 'font', type: 'string', title: 'Font', options: { list: [] } },  // Dropdown from fonts
+            { 
+              name: 'fontSize', 
+              type: 'number', 
+              title: 'Font Size' 
+            },
+            {
+              name: 'fontSizeUnit',
+              type: 'string',
+              title: 'Font Size Unit',
+              options: {
+                list: ['px', 'em', '%', 'rem', 'vw', 'vh'],
+                layout: 'dropdown',
+              },
+              description: 'Select unit for font size',
+            },
+            { name: 'fontWeight', type: 'string', title: 'Font Weight', options: { list: ['normal', 'bold', 'lighter', 'bolder'] } },
+            { name: 'lineHeight', type: 'number', title: 'Line Height' },
+          ]
+        },
+
+        // H5
+        {
+          name: 'h5',
+          title: 'H5 Font',
+          type: 'object',
+          fields: [
+            { name: 'font', type: 'string', title: 'Font', options: { list: [] } },  // Dropdown from fonts
+            { 
+              name: 'fontSize', 
+              type: 'number', 
+              title: 'Font Size' 
+            },
+            {
+              name: 'fontSizeUnit',
+              type: 'string',
+              title: 'Font Size Unit',
+              options: {
+                list: ['px', 'em', '%', 'rem', 'vw', 'vh'],
+                layout: 'dropdown',
+              },
+              description: 'Select unit for font size',
+            },
+            { name: 'fontWeight', type: 'string', title: 'Font Weight', options: { list: ['normal', 'bold', 'lighter', 'bolder'] } },
+            { name: 'lineHeight', type: 'number', title: 'Line Height' },
+          ]
+        },
+
+        // Body
+        {
+          name: 'body',
+          title: 'Body Font',
+          type: 'object',
+          fields: [
+            { name: 'font', type: 'string', title: 'Font', options: { list: [] } },  // Dropdown from fonts
+            { 
+              name: 'fontSize', 
+              type: 'number', 
+              title: 'Font Size' 
+            },
+            {
+              name: 'fontSizeUnit',
+              type: 'string',
+              title: 'Font Size Unit',
+              options: {
+                list: ['px', 'em', '%', 'rem', 'vw', 'vh'],
+                layout: 'dropdown',
+              },
+              description: 'Select unit for font size',
+            },
+            { name: 'fontWeight', type: 'string', title: 'Font Weight', options: { list: ['normal', 'bold', 'lighter', 'bolder'] } },
+            { name: 'lineHeight', type: 'number', title: 'Line Height' },
+          ]
+        },
+      ],
     },
+
+    // Color Settings
     {
       name: 'colors',
-      title: 'Colors',
+      title: 'Color Scheme',
       type: 'object',
       fields: [
         { name: 'primary', type: 'color', title: 'Primary Color' },
         { name: 'secondary', type: 'color', title: 'Secondary Color' },
         { name: 'background', type: 'color', title: 'Background Color' },
-        { name: 'text', type: 'color', title: 'Text Color' }
-      ]
-    }
-  ]
+        { name: 'text', type: 'color', title: 'Text Color' },
+      ],
+    },
+  ],
 };
