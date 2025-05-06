@@ -24,8 +24,8 @@ export default {
         { type: 'menu' },
         { type: 'menuitem' },
         { type: 'post' },
-        { type: 'siteSettings' },
-        { type: 'mediaAsset' }, 
+        { type: 'siteSettings' }
+        // { type: 'mediaAsset' }, 
       ]
     }
   ]

@@ -10,15 +10,14 @@ export default {
     { name: 'siteName', type: 'string', title: 'Site Name' },
     {
       name: 'favicon',
-      type: 'reference',
+      type: 'image',
       title: 'Favicon',
-      to: [{ type: 'mediaAsset' }],  
+      
     },
     {
       name: 'logo',
       type: 'image',  
       title: 'Logo',
-      to: [{ type: 'mediaAsset' }],
     },
     {
       name: 'fonts',
