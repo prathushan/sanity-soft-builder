@@ -1,4 +1,3 @@
-
 import { FaCog } from 'react-icons/fa';
 
 export default {
@@ -12,12 +11,17 @@ export default {
       name: 'favicon',
       type: 'image',
       title: 'Favicon',
-      
+      options: {
+        hotspot: true  
+      }
     },
     {
       name: 'logo',
-      type: 'image',  
+      type: 'image',
       title: 'Logo',
+      options: {
+        hotspot: true  
+      }
     },
     {
       name: 'fonts',

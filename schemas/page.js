@@ -14,7 +14,23 @@ export default {
       name: 'content',
       title: 'Page Content',
       type: 'array',
-      of: [{ type: 'builderBlock' }] // ✅ Use the central builderBlock here
+      of: [{ type: 'builderBlock' }] 
+    },
+    {
+      name: 'seo',
+      title: 'SEO Settings',
+      type: 'object',
+      fields: [
+        {name: 'metaTitle', type: 'string'},
+        {name: 'metaDescription', type: 'text'},
+        {name: 'ogImage', type: 'image'},
+        {
+          name: 'canonicalUrl',
+          type: 'url',
+          description: 'Canonical URL for this page'
+        }
+      ]
     }
+    
   ]
 }
