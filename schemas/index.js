@@ -24,7 +24,7 @@ import menuitem from './blocks/menuitem'
 import post from './blocks/post'
 import siteSettings from './blocks/siteSettings'
 import { FaCog } from 'react-icons/fa'
-import mediaAsset from './blocks/mediaAsset'
+// import mediaAsset from './blocks/mediaAsset'
 
 export const schemaTypes = [
   page,
@@ -44,7 +44,7 @@ export const schemaTypes = [
   menuitem,
   post,
   siteSettings,
-  mediaAsset,
+  // mediaAsset,
   contactForm,
   Form
 ]

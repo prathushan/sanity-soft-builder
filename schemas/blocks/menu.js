@@ -15,9 +15,10 @@ export default {
     {
       name: 'headerLogo',
       title: 'Header Logo',
-      type: 'reference',
-      to: [{ type: 'mediaAsset' }],
-      description: 'Select a logo from the media library',
+      type: 'image',
+      
+      
+      
     },
     {
       name: 'items',

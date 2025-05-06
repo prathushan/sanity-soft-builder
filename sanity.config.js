@@ -2,7 +2,8 @@ import { defineConfig } from 'sanity'
 import { deskTool } from 'sanity/desk'
 import { visionTool } from '@sanity/vision'
 import { schemaTypes } from './schemas'
-import { colorInput } from '@sanity/color-input' // ✅ Add this import
+import { colorInput } from '@sanity/color-input' 
+import {media} from 'sanity-plugin-media'
 
 export default defineConfig({
   name: 'default',
@@ -14,7 +15,8 @@ export default defineConfig({
   plugins: [
     deskTool(),
     visionTool(),
-    colorInput() // ✅ Register the color input plugin here
+    colorInput() ,
+    media()
   ],
 
   schema: {
