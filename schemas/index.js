@@ -10,9 +10,11 @@ import imageBlock from './blocks/imageBlock'
 import videoBlock from './blocks/videoBlock'
 import buttonBlock from './blocks/buttonBlock'
 import columnsBlock from './blocks/columnsBlock'
-import containerBlock from './blocks/containerBlock'  // ✅ Add this
-import headingBlock from './blocks/headingBlock'      // ✅ And this
+import containerBlock from './blocks/containerBlock'  
+import headingBlock from './blocks/headingBlock'     
 import spacerBlock from './blocks/spacerBlock'
+import contactForm from './blocks/contactForm'
+import Form from './blocks/form'
 
 
 import fontUpload from './blocks/fontUpload'
@@ -43,4 +45,6 @@ export const schemaTypes = [
   post,
   siteSettings,
   mediaAsset,
+  contactForm,
+  Form
 ]
