@@ -25,9 +25,16 @@ import post from './blocks/post'
 import siteSettings from './blocks/siteSettings'
 import { FaCog } from 'react-icons/fa'
 // import mediaAsset from './blocks/mediaAsset'
+import category from './blocks/category'
 
 export const schemaTypes = [
+  siteSettings,
+  menu,
+  menuitem,
+  footerSetting,
   page,
+  post,
+  category,
   builderBlock,
   heroSection,
   textBlock,
@@ -35,16 +42,11 @@ export const schemaTypes = [
   videoBlock,
   buttonBlock,
   columnsBlock,
-  containerBlock,  // ✅ Included
-  headingBlock,    // ✅ Included
+  containerBlock,  
+  headingBlock,    
   spacerBlock,
   fontUpload, 
-  footerSetting,
-  menu,
-  menuitem,
-  post,
-  siteSettings,
   // mediaAsset,
   contactForm,
-  Form
+  Form,
 ]
