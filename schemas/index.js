@@ -10,31 +10,31 @@ import imageBlock from './blocks/imageBlock'
 import videoBlock from './blocks/videoBlock'
 import buttonBlock from './blocks/buttonBlock'
 import columnsBlock from './blocks/columnsBlock'
-import containerBlock from './blocks/containerBlock'  
-import headingBlock from './blocks/headingBlock'     
+import containerBlock from './blocks/containerBlock'  // ✅ Add this
+import headingBlock from './blocks/headingBlock'      // ✅ And this
 import spacerBlock from './blocks/spacerBlock'
-import contactForm from './blocks/contactForm'
-import Form from './blocks/form'
 
 
-import fontUpload from './blocks/fontUpload'
+import fontUpload from './blocks/fontUpload'  
 import footerSetting from './blocks/footerSettings'
 import menu from './blocks/menu'
 import menuitem from './blocks/menuitem'
 import post from './blocks/post'
 import siteSettings from './blocks/siteSettings'
 import { FaCog } from 'react-icons/fa'
-// import mediaAsset from './blocks/mediaAsset'
-import category from './blocks/category'
+import mediaAsset from './blocks/mediaAsset'
+
+
+import imageWithTextSection from './blocks/imageWithTextSection'
+import richTextSection from './blocks/richTextSection'
+import videoWithTextSection from './blocks/videoWithTextSection'
+import faqSection from './blocks/faqSection'
+import newsletterSignupSection from './blocks/newsletterSignupSection'
+
+
 
 export const schemaTypes = [
-  siteSettings,
-  menu,
-  menuitem,
-  footerSetting,
   page,
-  post,
-  category,
   builderBlock,
   heroSection,
   textBlock,
@@ -46,7 +46,17 @@ export const schemaTypes = [
   headingBlock,    
   spacerBlock,
   fontUpload, 
-  // mediaAsset,
-  contactForm,
-  Form,
+  footerSetting,
+  menu,
+  menuitem,
+  post,
+  siteSettings,
+  mediaAsset,
+  imageWithTextSection,
+  videoWithTextSection,
+
+richTextSection,
+faqSection,
+newsletterSignupSection,
 ]
+

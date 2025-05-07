@@ -1,6 +1,6 @@
 export default {
-  name: 'heroSection',
-  title: 'Hero Section',
+  name: 'videoWithTextSection',
+  title: 'Video With Text Section',
   type: 'object',
   fieldsets: [
     { name: 'content', title: 'Content', options: { collapsible: true, default: true } },
@@ -8,7 +8,7 @@ export default {
     { name: 'advanced', title: 'Advanced', options: { collapsible: true } },
   ],
   fields: [
-    // -------- Content --------
+    // --- Content ---
     {
       name: 'title',
       title: 'Title',
@@ -16,9 +16,25 @@ export default {
       fieldset: 'content',
     },
     {
-      name: 'subtitle',
-      title: 'Subtitle',
+      name: 'text',
+      title: 'Text',
       type: 'text',
+      fieldset: 'content',
+    },
+    {
+      name: 'video',
+      title: 'Video File',
+      type: 'file',
+      fieldset: 'content',
+      options: {
+        accept: 'video/mp4',
+      },
+    },
+    {
+      name: 'videoUrl',
+      title: 'Video URL (YouTube/Vimeo)',
+      type: 'url',
+      description: 'Used if a video file is not provided',
       fieldset: 'content',
     },
     {
@@ -37,68 +53,27 @@ export default {
         },
       ],
     },
-    {
-      name: 'backgroundType',
-      title: 'Background Type',
-      type: 'string',
-      options: {
-        list: ['color', 'image', 'video', 'gradient'],
-      },
-      fieldset: 'content',
-    },
+
+    // --- Style ---
     {
       name: 'backgroundColor',
       title: 'Background Color',
       type: 'string',
-      hidden: ({ parent }) => parent?.backgroundType !== 'color',
-      fieldset: 'content',
-    },
-    {
-      name: 'backgroundImage',
-      title: 'Background Image',
-      type: 'image',
-      hidden: ({ parent }) => parent?.backgroundType !== 'image',
-      fieldset: 'content',
-    },
-    {
-      name: 'backgroundVideo',
-      title: 'Background Video',
-      type: 'file',
-      options: {
-        accept: 'video/mp4',
-      },
-      hidden: ({ parent }) => parent?.backgroundType !== 'video',
-      fieldset: 'content',
-    },
-    {
-      name: 'backgroundGradient',
-      title: 'Gradient (CSS string)',
-      type: 'string',
-      hidden: ({ parent }) => parent?.backgroundType !== 'gradient',
-      fieldset: 'content',
-    },
-
-    // -------- Style --------
-    {
-      name: 'height',
-      title: 'Height',
-      type: 'string',
-      description: 'Example: 100vh, 600px',
-      fieldset: 'style',
-    },
-    {
-      name: 'alignment',
-      title: 'Content Alignment',
-      type: 'string',
-      options: {
-        list: ['left', 'center', 'right'],
-      },
       fieldset: 'style',
     },
     {
       name: 'textColor',
       title: 'Text Color',
       type: 'string',
+      fieldset: 'style',
+    },
+    {
+      name: 'alignment',
+      title: 'Text Alignment',
+      type: 'string',
+      options: {
+        list: ['left', 'center', 'right'],
+      },
       fieldset: 'style',
     },
     {
@@ -114,8 +89,8 @@ export default {
       ],
     },
     {
-      name: 'subtitleTypography',
-      title: 'Subtitle Typography',
+      name: 'textTypography',
+      title: 'Text Typography',
       type: 'object',
       fieldset: 'style',
       fields: [
@@ -126,7 +101,7 @@ export default {
       ],
     },
 
-    // -------- Advanced --------
+    // --- Advanced ---
     {
       name: 'advanced',
       title: 'Advanced Options',
@@ -149,4 +124,4 @@ export default {
       ],
     },
   ],
-}
+};
