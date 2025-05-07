@@ -13,8 +13,7 @@ export default {
     {
       name: 'content',
       title: 'Page Content',
-      type: 'array',
-      of: [{ type: 'builderBlock' }] // ✅ Use the central builderBlock here
+      type: 'builderBlock'  // now it's an array of blocks directly
     }
   ]
 }

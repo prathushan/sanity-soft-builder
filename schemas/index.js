@@ -15,7 +15,7 @@ import headingBlock from './blocks/headingBlock'      // ✅ And this
 import spacerBlock from './blocks/spacerBlock'
 
 
-import fontUpload from './blocks/fontUpload'
+import fontUpload from './blocks/fontUpload'  
 import footerSetting from './blocks/footerSettings'
 import menu from './blocks/menu'
 import menuitem from './blocks/menuitem'
@@ -23,6 +23,15 @@ import post from './blocks/post'
 import siteSettings from './blocks/siteSettings'
 import { FaCog } from 'react-icons/fa'
 import mediaAsset from './blocks/mediaAsset'
+
+
+import imageWithTextSection from './blocks/imageWithTextSection'
+import richTextSection from './blocks/richTextSection'
+import videoWithTextSection from './blocks/videoWithTextSection'
+import faqSection from './blocks/faqSection'
+import newsletterSignupSection from './blocks/newsletterSignupSection'
+
+
 
 export const schemaTypes = [
   page,
@@ -33,8 +42,8 @@ export const schemaTypes = [
   videoBlock,
   buttonBlock,
   columnsBlock,
-  containerBlock,  // ✅ Included
-  headingBlock,    // ✅ Included
+  containerBlock,  
+  headingBlock,    
   spacerBlock,
   fontUpload, 
   footerSetting,
@@ -43,4 +52,11 @@ export const schemaTypes = [
   post,
   siteSettings,
   mediaAsset,
+  imageWithTextSection,
+  videoWithTextSection,
+
+richTextSection,
+faqSection,
+newsletterSignupSection,
 ]
+
